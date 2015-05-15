@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv= "Content-Type" content= "text/html"; charset= "utf-8" />
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="../resource/css/index.css" />
+<link rel="stylesheet"  type="text/css" href="../resource/extjs/resources/css/ext-all.css">
+<script type="text/javascript" src="../resource/js/jquery.1.11.js"></script>
+<script type="text/javascript" src="../resource/js/FileOperation.js" ></script>
+<script type="text/javascript" src="../resource/js/effect.js" ></script>
+<script type="text/javascript" src="../resource/extjs/ext-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../resource/extjs/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/js/AjaxConn.js"></script>
+</head>
+<body>
+<div class="header" id="logo">
+	<div class="logo">
+		<img src="../resource/img/logo.png" alt="logo">
+	</div>
+	<div class="topbar">
+		<a href="javascript:void(0)" onclick="uploadFileCall();">
+			<span class="upload"></span>
+			上传
+			<form>
+				<input class="upload-file" type="file"/>
+			</form>
+		</a>
+		<a href="javascript:void(0)" onclick="downloadFile();">
+			<span class="download"></span>
+			下载
+		</a>
+		<a href="javascript:void(0)" onclick="newFolderCall();">
+			<span class="upload"></span>
+			新建
+		</a>
+		<div class="search">
+			<span></span>
+			<input class="searchbox" id="search" type="text" placeholder="按Enter键搜索" onkeydown="FileContentSearch();"/>	
+		</div>
+		<div class="switch">
+			<span></span>
+		</div>
+	</div>
+</div>
+<div class="left" id="left">
+	<div class="nav">
+		<div class="slide"></div>
+		<ul>
+			<li name="0" class="active">
+				<span class="img-all"></span>
+				<a href="javascript:void(0)" onclick="allList();">全&nbsp&nbsp部</a>
+			</li>
+			<li name="1">
+				<span class="img-near"></span>
+				<a href="javascript:void(0)">最&nbsp&nbsp近</a>
+			</li>
+			<hr/>
+			
+
+			<li name="3">
+				<span class="img-doc"></span>
+				<a href="javascript:void(0)" onclick="FileSearch(0);">文&nbsp&nbsp档</a>
+			</li>
+			<li name="4">
+				<span class="img-pic"></span>
+				<a href="javascript:void(0)" onclick="FileSearch(1);">图&nbsp&nbsp片</a>
+			</li>
+			<li name="5">
+				<span class="img-music"></span>
+				<a href="javascript:void(0)" onclick="FileSearch(2);">音&nbsp&nbsp乐</a>
+			</li>
+			<li name="6">
+				<span class="img-video"></span>
+				<a href="javascript:void(0)" onclick="FileSearch(3);">视&nbsp&nbsp频</a>
+			</li>
+			<li name="7">
+				<span class="img-bt"></span>
+				<a href="javascript:void(0)">种&nbsp&nbsp子</a>
+			</li>
+			<li name="8">
+				<span class="img-other"></span>				<a href="javascript:void(0)">其&nbsp&nbsp他</a>
+			</li>
+			<hr/> 
+
+			<li name="10">
+				<span class="img-share"></span>
+				<a href="javascript:void(0)">分&nbsp&nbsp享</a>
+			</li>
+			<li name="11">
+				<span class="img-bin"></span>
+				<a href="javascript:void(0)">回收站</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="contain">
+	<iframe src="download.html" frameborder="0" id="bsFrame" name="bsFrame" scrolling="yes" height="725px" width="100%"></iframe>
+</div>
+
+</body>
+</html>

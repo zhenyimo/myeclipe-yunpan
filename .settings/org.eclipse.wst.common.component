@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="yunpan">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/xml"/>
+        <property name="context-root" value="/yunpan"/>
+        <property name="java-output-path" value="/yunpan/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

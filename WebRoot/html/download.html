@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv= "Content-Type" content= "text/html"; charset= "utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../resource/css/download.css" />
+<link rel="stylesheet"  type="text/css" href="../resource/extjs/resources/css/ext-all.css">
+<script type="text/javascript" src="../resource/js/jquery.1.11.js"></script>
+<script type="text/javascript" src="../resource/js/FileOperation.js" ></script>
+<script type="text/javascript" src="../resource/js/effect.js" ></script>
+<script type="text/javascript" src="../resource/extjs/ext-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../resource/extjs/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/js/AjaxConn.js"></script>
+</head>
+<body>
+	<div>文件路径:<div class="path" id="path">/</div></div>
+	
+	<table class="contain-table" id="contain-table" border="0" cellspacing="0" cellpadding="0">
+		<tr class="title">
+			<th class="checked">&nbsp</th>
+			<th class="name">文件名</th>
+			<th class="size">大小</th>
+			<th class="type">文件类型</th>
+			<th class="date">修改日期</th>
+			<th>操作</th>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="contain-list">
+			<td class="checked"><input type="checkbox" /></td>
+			<td class="doc-name">Feels like home.mp3</td>
+			<td>4.23M</td>
+			<td>mp3</td>
+			<td>2014-09-19</td>
+			<td>
+				<a class="table-a" href="javascript:void(0)" onclick="del(this)">删除</a>
+				<a class="table-a" href="javascript:void(0)">下载</a>
+				<select class="select">
+					<option>更多</option>
+					<option>重命名</option>
+					<option>移动到</option>
+				</select>
+			</td>
+		</tr>
+
+	</table>
+	<div class="tb-select" id="tb-select">
+			<input type="checkbox" onclick="judge(this)"/><span>全选</span>
+		<a href="javascript:void(0)" onclick="del()">删除</a>
+	</div>
+</body>
+</html>

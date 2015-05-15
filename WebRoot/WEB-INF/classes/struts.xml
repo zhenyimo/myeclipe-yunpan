@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<!-- 限制大小 -->
+	 <constant name="struts.multipart.maxSize" value="500000000000000" />
+
+	<package name="fileactions" extends="json-default">
+	
+		 <!-- 定义一个拦截器 -->  
+        <interceptors>  
+            <interceptor name="authority"  
+                class="fileactions.LoginInterceptor">  
+            </interceptor>  
+            <!-- 拦截器栈 -->  
+            <interceptor-stack name="mydefault"> 
+             	<interceptor-ref name="authority" />  
+                <interceptor-ref name="defaultStack" />     
+            </interceptor-stack>  
+        </interceptors>  
+  
+        <!-- 定义全局Result -->  
+        <global-results>  
+            <!-- 当返回login视图名时，转入/login.html页面 -->  
+            <result name="login">login.html</result>  
+        </global-results>  
+        
+        
+        
+		<action name="login" class="fileactions.LoginAction" method="login">
+			<result name="input">
+				login.html
+			</result>
+			<result name="success" type="redirect">
+				html/index.html
+			</result>
+		</action>
+	
+		<!-- 文件列表 -->
+		<action name="FileList" class="fileactions.FileListAction">
+			<interceptor-ref name="mydefault" />
+			<result type="json"> 
+      	   	    <param name="root">success,resultList</param>
+			</result>
+		</action>
+		
+		<!-- 内容查询 -->
+		<action name="FileContentSearch" class="fileactions.FileContentSearchAction">
+		<interceptor-ref name="mydefault" />
+			<result type="json">
+				<param name="root">success,resultList</param>
+			</result>
+		</action>
+		
+		
+		<!-- 文件家创建  -->
+		<action name="FolderCreate" class="fileactions.FolderCreateAction">
+		<interceptor-ref name="mydefault" />
+			<result name="success" type="json">
+				<param name="root">
+					success
+				</param>
+			</result>
+		</action>
+		
+		<!-- 删除文件  -->
+		<action name="FileDelete" class="fileactions.FileDeleteAction">
+		<interceptor-ref name="mydefault" />
+			<result name="success" type="json">
+			 	<param name="root">
+			 		success
+			 	</param>
+			 </result>
+		</action>
+		
+		<!-- 文件重命名  -->
+		<action name="FileRename" class="fileactions.FileRenameAction">
+		<interceptor-ref name="mydefault" />
+			<result name="success" type="json">
+				<param name="root">
+					success
+				</param>
+			</result>
+		</action>
+		
+		<!-- 文件下载  -->
+		<action name="FileDownload" class="fileactions.FileDownloadAction">
+		<interceptor-ref name="mydefault" />
+			<result name="success" type="stream">
+				<param name="inputName">downloadFile</param>
+				<param name="bufferSize">4096</param>
+				<param name="contentType">application/octet-stream</param>
+				 <param name="contentDisposition">   
+                    attachment;filename="${DownloadChineseFileName}"  
+                </param> 
+			</result>
+			<result name="error">/html/error.html</result>
+		</action>
+		
+		<!-- 上传文件 -->
+		<action name="FileUpload" class="fileactions.FileUploadAction">
+		<interceptor-ref name="mydefault" />
+			<result type="json">
+				<param name="root">success</param>
+			</result>
+		</action>
+		
+		<!-- 进度条查询 -->
+		<action name="FileProgressBar" class="fileactions.FileProgressBarAction">
+			<result type="json">
+				<param name="root">success,resultStr</param>
+			</result>
+		</action>
+		
+		
+		<!--文件查询  -->
+		<action name="FileExtSearch" class="fileactions.FileExtSearchAction">
+			<result type="json">
+				<param name="root">success,resultList</param>
+			</result>
+		</action>
+	</package>
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest" name="requestHandler" class="fileactions.FileUploadMultiPartRequest" scope="default" />
+    <constant name="struts.multipart.handler" value="requestHandler" />
+</struts>    

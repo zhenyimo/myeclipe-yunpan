@@ -1,0 +1,90 @@
+body,div,ul,li,a,img,tr,th,td{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "微软雅黑";
+	min-width: 980px;
+}
+a{
+	color: #6a6767;
+}
+.path{
+	color: #6c7c7c;
+	font-size:14px;
+	backgroud-color:#effbf5;
+}
+.contain-table{
+	width:100%;
+
+}
+.title{
+	height:45px;
+	background-color: #effbf5;
+	
+}
+.title th{
+	color: #5eafe3;
+	font-weight: normal;
+	border-bottom: 1px solid #5eafe3;
+}
+.contain-table tr{
+	text-align: center;
+}
+.contain-list:hover{
+	background-color:#f0f0f0;
+}
+.contain-table td{
+	color: #6c6c6c;
+	font-size:14px;
+	height: 42px;
+	line-height: 35px; 
+	border-bottom: 1px solid #dedede;
+}
+.table-a{
+	font-size: 14px;
+	margin-right: 20px;
+}
+.select{
+	color: #6c6c6c;
+	font-family: "微软雅黑";
+	outline: none;
+}
+.checked{
+	width: 6%;
+	text-align: center;
+}
+.doc-name{
+	cursor: pointer;
+}
+.name{
+	width: 36%;
+}
+.type{
+	width: 10%;
+}
+.size{
+	width: 10%;
+}
+.date{
+	width: 15%;
+}
+
+
+.tb-select{
+	color: #6c6c6c;
+	font-size: 14px;
+	margin-top: 25px;
+	margin-left: 22px;
+}
+.tb-select input{
+	margin-right: 13px;
+}
+.tb-select a{
+	color: #fff;
+	text-decoration: none;
+	background-color: #5eafe3;
+	padding: 5px 22px;
+	margin-left: 20px;
+}

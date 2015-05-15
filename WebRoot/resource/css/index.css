@@ -1,0 +1,185 @@
+/*首页,by--MQ*/
+body,div,ul,li,a,img,tr,th,td{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "微软雅黑";
+	min-width: 980px;
+}
+a{
+	color: #6a6767;
+}
+
+/*头部（logo + 上传，下载，搜索）*/
+.header{
+	height: 120px;
+}
+.logo{
+	float: left;
+	height: 120px;
+	width: 17.5%;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+.topbar{
+	height: 120px;
+	width: 82.5%;
+	position: relative;
+	background-color: #eaeaea;
+	border-bottom: 2px solid #e5e5e5;
+	float: left;
+}
+.topbar a{
+	line-height: 120px;
+	margin: 0 30px;
+	font-size: 20px;
+}
+.topbar span{
+	width: 65px;
+	height: 65px;
+	position: relative;
+	top: 32px;
+}
+.upload{
+	background-position: -70px 0;
+}
+.upload-file{
+	position: absolute;
+	top: 47px;
+	left: 3.6%;
+	width: 7.2%;
+	filter:alpha(opacity=0);       /* IE */
+	-moz-opacity:0;              /* 老版Mozilla */
+ 	-khtml-opacity:0;
+	opacity: 0;
+}
+.download{
+	background-position: -70px -70px;
+}
+
+.search{　
+	width: 200px;
+	height: 28px;
+	float: left;
+	background-color: #fff;
+	border: 1px solid #e1e1e1;
+	-moz-border-radius: 50px;   /* 圆的半径为边长的一半，即300px */
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: absolute;
+    right: 65px;
+	top: 42px;
+}
+.search span{
+	width: 35px;
+	height: 35px;
+	background-position: -35px -175px;
+	position: relative;
+	top: 5px;
+	left: 10px;
+}
+.searchbox{
+	width: 135px;
+	margin-right: 17px;
+	outline: none;
+	border: 0;
+	line-height: 22px;
+}
+.switch{
+	position: absolute;
+	right: 0;
+	top: -4px;
+}
+.switch span{
+	cursor: pointer;
+	background-position: -35px -140px; 
+}
+/*头部 end */
+
+/*左边导航栏*/
+.left{
+	width: 17.5%;
+	height: 730px;
+	float: left;
+}
+
+.slide{
+	height: 60px;
+	width: 5px;
+	background-color: #5eafe3;
+	z-index: 999;
+	float: left;
+	position: relative;
+}
+.nav{
+	background-color: #eaeaea;
+	position: relative;
+}
+.nav li{
+	list-style: none;
+	height: 60px;
+	line-height: 60px;
+}
+.nav li:hover{
+	background: #dae5eb;
+}
+.nav hr{
+	margin: 30px 0;
+	border:none;
+	height: 1px;
+	background-color:#dcdbdb;
+	color: #dcdbdb;
+	display: block;
+}
+.nav a,.topbar a{
+	float: left;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.nav span,.search span,.switch span,.upload,.download{
+	background-image: url("../img/icon.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+}
+.nav span,.switch span{
+	width: 35px;
+	height: 35px;
+	margin: 17px 2% 0 23%;
+}
+.img-near{
+	background-position: 0 -35px;
+}
+.img-pic{
+	background-position: 0 -105px;
+}
+.img-music{
+	background-position: 0 -135px;
+}
+.img-video{
+	background-position: 0 -170px;
+}
+.img-bt{
+	background-position: -35px 0;
+}
+.img-other{
+	background-position: -35px -35px;
+}
+.img-share{
+	background-position: -35px -70px;
+}
+.img-bin{
+	background-position: -35px -105px;
+}
+/*导航栏 end*/
+
+/*内容*/
+.contain{
+	float: left;
+	width:82.5%;
+}

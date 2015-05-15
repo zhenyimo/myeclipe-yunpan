@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>登录</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: "微软雅黑";ß
+	}
+	.title{
+		margin: 15px 0;
+	}
+	.login{
+		position: absolute;  
+  		width:330px;  
+  		height:240px;  
+  		left:50%;  
+  		top:50%;  
+  		margin-left:-165px;  
+  		margin-top:-120px;  
+  		border: solid 1px #ddd; 
+  		 text-align: center;
+	}
+	input[type="text"]{
+		height: 30px;
+		width: 265px;
+		border: 1px solid #eee;
+		border-radius: 3px;
+  		background-color: #eee;
+  		margin:8px;
+	}
+	input[type="submit"]{
+		  text-align: center;
+		  width: 264px;
+		  height: 42px;
+		  margin-left: 10px;
+		  margin-top: 18px;
+		  background-color: #20beff;
+		  padding: 0;
+		  border: 1px solid #ccc;
+		  border-radius: 5px;
+		  color: #fff;
+		  font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+<div class="login">
+	<h2 class="title">登录</h2>			
+	<form method="post" action="login.action">
+		<div>
+			<img src="/yunpan/resource/img/user.png" />
+			<input type = "text" placeholder="用户名" name="username"/>	
+		</div>
+		<div>
+			<img src="/yunpan/resource/img/psw.png" />
+			<input type = "text" placeholder="密码" name="pwd"/>	
+		</div>
+		<input type="submit" value="登录"/>
+	</form>
+</div>
+
+
+</body>
+</html>

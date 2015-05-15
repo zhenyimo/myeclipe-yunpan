@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="yunpan"
+  id="myeclipse.1425968038624"
+  context-root="/yunpan"
+  j2ee-spec="5.0"
+  archive="yunpan.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
